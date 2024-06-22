@@ -3,7 +3,8 @@
     {
       "id": "1",
       "username": "yusuf",
-      "password": "123"
+      "password": "123",
+      "postId": "7"
     },
     {
       "id": "2",
@@ -27,6 +28,11 @@
     },
     {
       "id": "a0b1",
+      "username": "ali",
+      "password": "789"
+    },
+    {
+      "id": "53c1",
       "username": "ali",
       "password": "789"
     }

@@ -3,6 +3,7 @@ import GetUserById from "./axios/getUserById";
 import CreateUser from "./axios/createUser";
 import UpdateUser from "./axios/updateUser";
 import DeleteUser from "./axios/deleteUser";
+import AsyncProblem from "./api-practice/async-problem";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <CreateUser />
       <UpdateUser />
       <DeleteUser />
+      <AsyncProblem/>
     </>
   );
 }
