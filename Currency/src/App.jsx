@@ -1,10 +1,12 @@
 import './App.css'
+import Currency from './components/currency'
+import '../src/App.css'
 
 function App() {
 
   return (
-    <div>
-      project loading ...
+    <div className="app">
+      <Currency />
     </div>
   )
 }
