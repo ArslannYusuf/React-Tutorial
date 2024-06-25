@@ -1,10 +1,10 @@
 import React from "react";
 import Todo from "./todo";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, onDeleteTodo }) => {
   return (
     <div className="todo-list-div">
-      {todos && todos.map((todo) => <Todo key={todo.id} todo={todo} />)}
+      {todos && todos.map((todo) => <Todo key={todo.id} todo={todo} onDeleteTodo={onDeleteTodo} />)}
     </div>
   );
 };
