@@ -74,9 +74,21 @@
 }
 
 .todo-edit {
+  color: blue;
+}
+
+.todo-check {
   color: green;
 }
 
 .todo-text {
   margin: 0 10px;
+}
+
+.todo-edit-input{
+    width: 380px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid rgb(165, 164, 164);
 }

@@ -19,13 +19,19 @@ function App() {
 
   }
 
+  const updateTodo = (newTodo) => {
+    const updatedTodos =  todos.map((todo)=>todo.id !== newTodo.id ? todo : newTodo)
+
+    setTodos([...updatedTodos]);
+  }
+
 
   return (
    <div className="App">
 
       <div className='todo-app'>
       <TodoCreate onCreateTodo={createTodo}/>
-      <TodoList todos={todos} onDeleteTodo={deleteTodo}/>
+      <TodoList todos={todos} onDeleteTodo={deleteTodo} onUpdateTodo={updateTodo}/>
       </div>
 
    </div>
