@@ -9,7 +9,9 @@ const About = () => {
       <Link className='about-link' to='employee'>Çalışanlar Hakkında</Link>
       <Link className='about-link' to='company'>Şirket Hakkında</Link>
 
-      <Outlet/> {/* yukarida buluan child component'leri render eder */}
+      {/* to='employee' => /about/employee olarak defaultta '/' ekleniyor */}
+
+      <Outlet/> {/* yukarida bulunan child component'leri render eder,  parent component'in alt kısmına yazılır */}
     </div>
   )
 }
