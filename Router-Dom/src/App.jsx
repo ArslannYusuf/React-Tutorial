@@ -9,6 +9,7 @@ import Header from './components/Header'
 import NotFoundPage from './pages/NotFoundPage'
 import EmployeeAbout from './pages/EmployeeAbout'
 import CompanyAbout from './pages/CompanyAbout'
+import ProductDetails from './pages/ProductDetails'
 
 function App() {
 
@@ -29,9 +30,16 @@ function App() {
 
           <Route path='contact' element={<Contact />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/product-details/:id' element={<ProductDetails />} />
           <Route path='*' element={<NotFoundPage />} />
 
-          {/* path='*' => bu yönlendirme, tanımlanmamış veya geçersiz olan tüm URL'ler için geçerli olacaktır */}
+          {/* 
+
+          path='*' => bu yönlendirme, tanımlanmamış veya geçersiz olan tüm URL'ler için geçerli olacaktır 
+          
+          path='/product-details/:id' => burada ':' degisken tanımlamak için kullanılıyor
+
+          */}
       </Routes>
     </div>
   )

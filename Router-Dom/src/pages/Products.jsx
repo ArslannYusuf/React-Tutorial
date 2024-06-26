@@ -1,9 +1,17 @@
 import React from 'react'
+import Product from '../components/Product'
+import  products  from '../data/Products.json'
+
+
 
 const Products = () => {
   return (
     <div>
-      Products
+      {
+        products && products.map((product)=>(
+          <Product key={product.id} product={product}/>
+        ))
+      }
     </div>
   )
 }
