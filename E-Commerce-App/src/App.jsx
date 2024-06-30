@@ -2,7 +2,8 @@ import React from 'react'
 import './App.css'
 import PageContainer from './container/PageContainer'
 import Header from './components/Header'
-import ProductList from './components/productList'
+
+import RouterConfig from './config/RouterConfig'
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <div>
       <PageContainer>
         <Header />
-        <ProductList/>
+        <RouterConfig/>
+     
       </PageContainer>
     </div>
   )
