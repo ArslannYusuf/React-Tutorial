@@ -3,6 +3,7 @@ import  '../css/Header.css'
 import { FaMoon, FaShoppingBasket } from 'react-icons/fa'
 import { MdLightMode } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
+import Badge from '@mui/material/Badge';
 
 const Header = () => {
 
@@ -36,7 +37,9 @@ const Header = () => {
         {
           theme ? <FaMoon onClick={changeTheme} className='icon'/> :<MdLightMode onClick={changeTheme} className='icon'/> 
         }
-        <FaShoppingBasket className='icon'/>
+           <Badge badgeContent={4} color="error">
+               <FaShoppingBasket className='icon' style={{marginRight: '7px'}}/> 
+           </Badge>
         </div>
 
       </div>
