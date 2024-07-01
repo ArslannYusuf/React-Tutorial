@@ -1,8 +1,11 @@
 import React from "react";
 import "../css/Product.css";
+import { useNavigate } from "react-router-dom";
 
 const Product = ({ product }) => {
   const { id, price, image, title, description } = product;
+
+  const navigate = useNavigate();
 
   return (
     <div className="card">
@@ -13,7 +16,7 @@ const Product = ({ product }) => {
       </div>
 
       <div className="flex-row">
-        <button className="detail-btn">Detayı Gör</button>
+        <button className="detail-btn" onClick={()=>navigate(`/product-details/${id}`)}>Detayı Gör</button>
       </div>
     </div>
   )
