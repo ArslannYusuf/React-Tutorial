@@ -11,6 +11,7 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
   const { price, image, title, description } = selectedProduct;
   const [count, setCount] = useState(0);
+
   const increment = () => {
     setCount(count + 1);
   }
@@ -50,7 +51,7 @@ const ProductDetails = () => {
         </div>
 
         <div>
-          <button className="detail-btn">Sepete Ekle</button>
+          <button className="detail-page-btn">Sepete Ekle</button>
         </div>
       </div>
     </div>

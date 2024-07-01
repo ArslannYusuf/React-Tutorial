@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import  '../css/Header.css'
 import { FaMoon, FaShoppingBasket } from 'react-icons/fa'
 import { MdLightMode } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
 
-  const [theme, setTheme] = useState(false)
+  const [theme, setTheme] = useState(false);
+  const navigate = useNavigate();
 
   const changeTheme = () => {
     const root = document.getElementById('root')
@@ -22,8 +24,8 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <div className="flex-row">
-        <img className="logo" src="./src/images/logo.png"/>
+      <div className="flex-row" onClick={() => navigate('/')}>
+        <img className="logo" src="./src/images/logo.png" alt="logo"/>
         <p className="logo-text">Lion City</p>
       </div>
 
