@@ -4,13 +4,15 @@ import { FaMoon, FaShoppingBasket } from 'react-icons/fa'
 import { MdLightMode } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 import Badge from '@mui/material/Badge';
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { setDrawer } from '../redux/slices/basketSlice'
 
 const Header = () => {
 
   const [theme, setTheme] = useState(false);
   const navigate = useNavigate();
   const {products}= useSelector((store)=> store.basket)
+  const dispatch = useDispatch();
 
   const changeTheme = () => {
     const root = document.getElementById('root')
@@ -39,7 +41,7 @@ const Header = () => {
         {
           theme ? <FaMoon onClick={changeTheme} className='icon'/> :<MdLightMode onClick={changeTheme} className='icon'/> 
         }
-           <Badge badgeContent={products.length} color="error">
+           <Badge onClick={()=>dispatch(setDrawer())} badgeContent={products.length} color="error">
                <FaShoppingBasket className='icon' style={{marginRight: '7px'}}/> 
            </Badge>
         </div>
